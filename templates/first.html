@@ -1,0 +1,29 @@
+{% extends 'second.html' %}
+{% block content %}
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            Forms to database
+        </title>
+    </head>
+    <body>
+    <form action="" method="POST">{% csrf_token %}
+        <fieldset>
+        <legend>Contact Us</legend>
+        <label for="name">Enter your name</label><br/>
+        <input type="text" id="name" name="name" placeholder="Enter your name"><br/>
+        <label for="email">Enter your email</label><br/>
+        <input type="email" id="email" name="email" placeholder="Enter your email"><br/>
+        <label for="message">Enter your message</label><br/>
+        <textarea name="message" id="message" cols="30" rows="10"></textarea><br/>
+        <label for="name">Select your image</label><br/>
+        <input type="file" name="image" required>
+        <p></p>
+        <input type="submit" type="submit">
+    </fieldset>
+    </form>
+    </body>
+
+</html>
+{% endblock content %}
